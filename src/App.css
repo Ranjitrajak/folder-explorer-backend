@@ -1,0 +1,100 @@
+/* src/App.css */
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.toolbar button {
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.file-tree {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.file-item {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.file-item.dragging {
+  opacity: 0.5;
+}
+
+.file-item.over {
+  border: 1px dashed #666;
+  background-color: #f0f0f0;
+}
+
+.file-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.file-header:hover {
+  background-color: transparent; 
+}
+
+.toggle-btn {
+  margin-right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.file-icon {
+  margin-right: 8px;
+}
+
+.file-name {
+  flex-grow: 1;
+}
+
+.file-actions {
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.file-item:hover .file-actions {
+  opacity: 1;
+}
+
+.file-actions button {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 0.8em;
+}
+
+
+/* Drag states */
+.file-item.dragging {
+  opacity: 0.5;
+  background: #f8f8f8;
+}
+
+/* Drop targets */
+.file-item.folder.over {
+  background-color: rgba(74, 144, 226, 0.1);
+  outline: 2px dashed #4a90e2;
+}
+
+/* Prevent dropping on files */
+.file-item.file {
+  cursor: default;
+}
+
+/* Visual distinction between files/folders */
+.file-item.folder {
+  font-weight: bold;
+}
